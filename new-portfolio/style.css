@@ -1,0 +1,366 @@
+:root {
+    --bg-cta: #131414;
+    --fg-cta: #FFF;
+    --fg-strong: #131414;
+    --fg-subtle: #585958;
+    --bg-subtle: #585958;
+    --bg-nav: #DDDEDB;
+    --bg: #F9F9F6;
+    --border-subtle: #D8D9E1;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow: auto;
+    max-width: 600px;
+    padding: 0 16px 32px 16px;
+    margin: 0 auto;
+
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+ul {
+    list-style-type: none;
+    
+}
+
+a {
+    text-decoration: none;
+    color: var(--fg-subtle);
+
+}
+
+h1 {
+    color: var(--fg-strong);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 34px */
+    font-family: Inter;
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--fg-strong);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 170%;
+    /* 34px */
+}
+
+h3 {
+    font-size: 20px;
+    color: var(--fg-strong);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 170%;
+    /* 34px */
+}
+
+p,
+label {
+    color: var(--fg-subtle);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 34px */
+    font-family: Inter;
+    margin-bottom: 16px;
+}
+
+label {
+    color: var(--fg-strong);
+    line-height: 100%;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.required {
+    font-size: 12px;
+    color: var(--fg-subtle);
+    font-weight: 400;
+}
+
+body {
+    background-color: var(--bg);
+    gap: 48px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 16px 0 16px 0;
+    background: var(--bg)
+}
+
+
+
+.nav-container {
+    display: flex;
+    list-style-type: none;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.nav-item {
+    color: var(--fg-subtle);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: Inter;
+    padding: 8px 12px 8px 12px;
+    background: none;
+
+}
+
+.nav-item:hover {
+    border-bottom: solid 2px var(--fg-subtle);
+}
+
+.nav-item-active {
+    color: var(--fg-strong);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    font-family: Inter;
+    padding: 8px 12px 8px 12px;
+    border-bottom: solid 2px var(--fg-strong);
+
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+}
+
+.caption {
+    color: var(--fg-subtle);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 27.2px */
+    font-family: Inter;
+}
+
+.project-card {
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.project-thumbnail {
+    aspect-ratio: 4/2;
+    background: black;
+    width: 100%;
+    align-self: stretch;
+    border: solid 1px var(--border-subtle);
+    border-radius: 16px;
+    transition: all 0.2s ease-in-out;
+    transform-origin: center center;
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0px 0px 64px 0px rgba(0, 0, 0, 0.08);
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.cta {
+    padding: 10px 32px;
+    gap: 8px;
+    border-radius: 48px;
+    background: var(--bg-cta);
+    color: var(--fg-cta);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 170%;
+    transition: all 0.2s ease-in-out;
+    border: none; 
+
+}
+
+.cta:hover {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+    background: var(--bg-subtle);
+}
+
+.role-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px;
+    border: solid 1px var(--border-subtle);
+    border-radius: 20px;
+}
+
+input, 
+textarea {
+    height: 32px;
+    border: solid 1px var(--border-subtle);
+    border-radius: 6px;
+    padding: 0 0 0 8px;
+    display: flex;
+    align-items: start;
+    font-family: Inter;
+}
+
+textarea {
+    padding: 8px 0 0 8px;
+    height: 80px;
+    resize: none;
+
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 8px;
+
+}
+
+footer {
+    padding: 16px 0;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    margin: auto;
+
+}
+
+.footer-links-container {
+    display: flex;
+    gap: 12px;
+    font-family: Inter;
+    color: var(--fg-subtle);
+
+}
+
+.footer-links {
+    color: var(--fg-subtle);
+}
+
+.footer-links:hover {
+    text-decoration: underline;
+    color: var(--fg-strong); 
+}
+
+.built-by {
+    font-size: 16px;
+}
+
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 3s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+
+.contents {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 16px 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+
+}
+
+.contents::-webkit-scrollbar {
+    display: none;
+  }
+
+.content-link {
+    font-family: Inter;
+    padding: 8px 8px;
+    display: inline-block;
+    
+}
+
+
+
+.project-img {
+    aspect-ratio: 4/2;
+    background: black;
+    width: 100%;
+    align-self: stretch;
+    border: solid 1px var(--border-subtle);
+    border-radius: 16px;
+
+}
